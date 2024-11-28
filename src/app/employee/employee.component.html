@@ -1,0 +1,44 @@
+
+
+<div class="parent">
+    <div class="child">
+        <table class="table table-dark table-hover">
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Name</th>
+                    <th>Company</th>
+                    <th>Role</th>
+                    <th>Package</th>
+                    <th>Email</th>
+                    <th>DOB</th>
+                    <th>Address</th>
+                    <th>Hikes</th>
+                    <th>WorkMode</th>
+                    <th>Actions</th>
+                    <th>Details</th>
+                </tr>
+                
+            </thead>
+            <tbody>
+                <tr *ngFor="let employee of employees; let i = index">
+                    <td>{{i+1}}</td>
+                    <td>{{employee.name}}</td>
+                    <td>{{employee.company}}</td>
+                    <td>{{employee.role}}</td>
+                    <td>{{employee.package}}</td>
+                    <td>{{employee.email}}</td>
+                    <td>{{employee.dob}}</td>
+                    <td>{{employee.address}},{{employee.address.addressLine}},{{employee.address.city}},{{employee.address.state}},{{employee.address.pincode}}</td>
+                    <td>{{employee.hikes}},{{employee.hikes.year}},{{employee.hikes.percentage}}</td>
+                    <td>{{employee.workMode}}</td>
+                    <td>
+                        <button (click)="delete(i)" class="btn btn-danger">Delete</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-info">View</button>
+                    </td>
+            </tbody>
+        </table>
+    </div>
+</div>
