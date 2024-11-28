@@ -1,1 +1,16 @@
-<p>login works!</p>
+
+<div class="parent">
+
+
+    <form action="" [formGroup]="loginForm">
+        <label class="em" for="">Email :</label>
+        <input class="pas" type="email" placeholder="emailid" formControlName="email">
+    
+        <br>
+        <label class="em" for="">Password :</label>
+        <input class="pas" type="text" placeholder="password" formControlName="password">
+        <br>
+        <button (click)="login()" mat-raised-button color="primary">Login</button>
+    </form>
+
+</div>
