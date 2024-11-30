@@ -1,0 +1,88 @@
+
+<form [formGroup]="userForm">
+    <label for="">Name :</label>
+    <input type="text" formControlName="name">
+    <br>
+
+    <label for="">Company :</label>
+    <input type="text" formControlName="company">
+    <br>
+
+    <label for="">Role :</label>
+    <input type="text" formControlName="role">
+    <br>
+
+    <label for="">Package :</label>
+    <input type="number" formControlName="package">
+    <br>
+
+    <label for="">Email :</label>
+    <input type="email" formControlName="email">
+    <br>
+
+    <div formGroupName="address">
+        <label for="">Address line:</label>
+        <input type="text" formControlName="addressline">
+        <br>
+
+        <label for="">City :</label>
+        <input type="text" formControlName="city">
+        <br>
+
+        <label for="">State :</label>
+        <input type="text" formControlName="state">
+        <br>
+        <label for="">Pincode :</label>
+        <input type="number" formControlName="pincode">
+        <br>
+        
+    </div>
+
+    <label for="">DoB</label>
+    <input type="date" formControlName="dob">
+    <br>
+
+
+    <div>
+        <div>
+            <div>
+                <label>Hikes</label>
+                <label for="">Year :</label>
+                <input type="number">
+                <br>
+
+                <label for="">Percentage :</label>
+                <input type="number">
+                <br>
+            
+            </div>
+        </div>
+    </div>
+  <div>
+    <label for="">WorkMode :</label>
+    <br>
+    <input type="radio" name="workMode" formControlName="workMode" value="remote">
+    <label for="">Remote</label>
+    <br>
+    <input type="radio" name="workMode" formControlName="workMode" value="office">
+    <label for="">Work From Office</label>
+    <br>
+
+    <div *ngIf="userForm.get('workMode')?.value=='remote'">
+        <label for="">Wifi Fee</label>
+        <input type="number" formControlName="wifi">
+        <br>
+
+    </div>
+
+    <div *ngIf="userForm.get('workMode')?.value=='cab'">
+        <label for="">Cab Fee :</label>
+        <input type="number" formControlName="cab">
+        <br>
+
+    </div>
+  </div>  
+     
+    <button (click)="submit()" class="btn btn-info">Submit</button>
+
+</form>

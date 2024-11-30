@@ -29,8 +29,8 @@
                     <td>{{employee.package}}</td>
                     <td>{{employee.email}}</td>
                     <td>{{employee.dob}}</td>
-                    <td>{{employee.address}},{{employee.address.addressLine}},{{employee.address.city}},{{employee.address.state}},{{employee.address.pincode}}</td>
-                    <td>{{employee.hikes}},{{employee.hikes.year}},{{employee.hikes.percentage}}</td>
+                    <td>{{employee.address}},{{employee.address?.addressLine}},{{employee.address?.city}},{{employee.address?.state}},{{employee.address?.pincode}}</td>
+                    <td>{{employee.hikes}},{{employee.hikes?.year}},{{employee.hikes?.percentage}}</td>
                     <td>{{employee.workMode}}</td>
                     <td>
                         <button (click)="delete(i)" class="btn btn-danger">Delete</button>

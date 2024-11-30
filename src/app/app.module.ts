@@ -11,14 +11,16 @@ import {MatButtonModule} from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { EmployeeComponent } from './employee/employee.component';
-
+import { CreateEmployeeComponent } from './create-employee/create-employee.component';
+import {MatCardModule} from '@angular/material/card';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     DashboardComponent,
     HomeComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    CreateEmployeeComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +29,8 @@ import { EmployeeComponent } from './employee/employee.component';
     BrowserAnimationsModule,
     MatButtonModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatCardModule
   
   ],
   providers: [],
