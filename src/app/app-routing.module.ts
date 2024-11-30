@@ -5,13 +5,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthenticationGuard } from './authentication.guard';
 import { HomeComponent } from './home/home.component';
 import { EmployeeComponent } from './employee/employee.component';
+import { CreateEmployeeComponent } from './create-employee/create-employee.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'',component:LoginComponent},
   {path:'dashboard',canActivate:[AuthenticationGuard],component:DashboardComponent,children:[
     {path:'home',component:HomeComponent},
-    {path:'employee',component:EmployeeComponent}
+    {path:'employee',component:EmployeeComponent},
+    {path:'create-employee',component:CreateEmployeeComponent}
   ]}
 ];
 

@@ -21,3 +21,7 @@
     background-color: rgb(43, 156, 147); 
     overflow: scroll;
 }
+h2:hover{
+    color: white;
+    cursor: pointer;
+}

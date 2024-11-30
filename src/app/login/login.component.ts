@@ -11,8 +11,8 @@ import { Router } from '@angular/router';
 export class LoginComponent {
 
   public loginForm:FormGroup = new FormGroup({
-    email: new FormControl('',[Validators.required,Validators.email]),
-    password: new FormControl('',[Validators.required,Validators.minLength(5),Validators.maxLength(10)]),
+    email: new FormControl(),
+    password: new FormControl(),
   })
 
   constructor(private _loginService:LoginService,private _router:Router){}
@@ -23,6 +23,7 @@ export class LoginComponent {
       (data:any)=>{
         alert('login successful');
         this._router.navigateByUrl("/dashboard");
+        sessionStorage.setItem('token',data.token)
       },
       (error:any)=>{
         alert('login failed');
